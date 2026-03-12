@@ -231,15 +231,30 @@
     .illus img { width: 100%; height: auto; display: block; border-radius: 12px; }
     .hero-illus { position: absolute; bottom: 0; right: 0; width: 52%; opacity: 0.92; pointer-events: none; }
     .hero-illus img { border-radius: 0; }
-    .om-illus { border-radius: 12px; overflow: hidden; background: #F4F5F0; max-width: 340px; }
-    .om-illus img { width: 100%; height: auto; object-fit: cover; object-position: top; border-radius: 12px; display: block; }
-    .metode-illus { margin: 3rem auto 0; border-radius: 12px; overflow: hidden; background: #F4F5F0; max-width: 500px; }
-    .metode-illus img { width: 100%; height: auto; object-fit: cover; object-position: top center; border-radius: 12px; display: block; }
+    .om-illus { max-width: 340px; }
+    .om-illus img {
+      width: 100%; height: auto; display: block;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 45%, black 40%, transparent 80%);
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 45%, black 40%, transparent 80%);
+    }
+    .metode-illus { margin: 3rem auto 0; max-width: 500px; }
+    .metode-illus img {
+      width: 100%; height: auto; display: block;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, black 45%, transparent 85%);
+      mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, black 45%, transparent 85%);
+    }
 
     /* AMBISJON LAYOUT */
     .ambisjon-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: start; }
-    .ambisjon-illus { border-radius: 12px; overflow: hidden; background: #F4F5F0; max-width: 300px; }
-    .ambisjon-illus img { width: 100%; height: auto; display: block; border-radius: 12px; }
+    .ambisjon-illus { max-width: 300px; }
+    .ambisjon-illus img {
+      width: 100%; height: auto; display: block;
+      mix-blend-mode: multiply;
+      -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 80%);
+      mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, black 40%, transparent 80%);
+    }
     @media (max-width: 960px) {
       .ambisjon-layout { grid-template-columns: 1fr; }
       .ambisjon-illus { max-width: 100%; }
